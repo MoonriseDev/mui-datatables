@@ -724,7 +724,7 @@ class MUIDataTable extends React.Component {
 
       displayRow.push(columnDisplay);
 
-      const columnVal = columnValue === null || columnValue === undefined ? '' : JSON.stringify(columnValue);
+      const columnVal = columnValue === null || columnValue === undefined ? '' : JSON.stringify(columnValue)();
 
       const filterVal = filterList[index];
       const caseSensitive = options.caseSensitive;
@@ -793,9 +793,6 @@ class MUIDataTable extends React.Component {
       needle = needle.toLowerCase();
       stack = stack.toLowerCase();
     }
-
-    console.log(stack);
-    console.log(needle);
 
     return stack.indexOf(needle) >= 0;
   };
