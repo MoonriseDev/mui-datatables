@@ -789,7 +789,6 @@ class MUIDataTable extends React.Component {
     let stack = ReactDOMServer.renderToStaticMarkup(toSearch);
     let needle = ReactDOMServer.renderToStaticMarkup(toFind);
 
-
     if (!caseSensitive) {
       needle = needle.toLowerCase();
       stack = stack.toLowerCase();
