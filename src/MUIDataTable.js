@@ -794,6 +794,9 @@ class MUIDataTable extends React.Component {
       stack = stack.toLowerCase();
     }
 
+    console.log(stack);
+    console.log(needle);
+
     return stack.indexOf(needle) >= 0;
   };
 
