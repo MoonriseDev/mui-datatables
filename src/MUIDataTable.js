@@ -724,7 +724,7 @@ class MUIDataTable extends React.Component {
 
       displayRow.push(columnDisplay);
 
-      const columnVal = columnValue === null || columnValue === undefined ? '' : columnValue.toString();
+      const columnVal = columnValue === null || columnValue === undefined ? '' : JSON.stringify(columnValue);
 
       const filterVal = filterList[index];
       const caseSensitive = options.caseSensitive;
