@@ -9,6 +9,7 @@ import isUndefined from 'lodash.isundefined';
 import merge from 'lodash.merge';
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReactDOMServer from 'react-dom/server';
 import TableBody from './components/TableBody';
 import TableFilterList from './components/TableFilterList';
 import TableFooter from './components/TableFooter';
@@ -785,8 +786,9 @@ class MUIDataTable extends React.Component {
   }
 
   hasSearchText = (toSearch, toFind, caseSensitive) => {
-    let stack = toSearch.toString();
-    let needle = toFind.toString();
+    let stack = ReactDOMServer.renderToStaticMarkup(toSearch);
+    let needle = ReactDOMServer.renderToStaticMarkup(toFind);
+
 
     if (!caseSensitive) {
       needle = needle.toLowerCase();

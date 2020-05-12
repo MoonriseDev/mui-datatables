@@ -103,8 +103,10 @@
     "lodash.isundefined": "^3.0.1",
     "lodash.memoize": "^4.1.2",
     "lodash.merge": "^4.6.0",
+    "pretty-format": "^26.0.1",
     "prop-types": "^15.6.0",
-    "react-to-print": "^2.0.0-alpha.7"
+    "react-to-print": "^2.0.0-alpha.7",
+    "react-test-renderer": "^16.13.1"
   },
   "side-effects": false,
   "nyc": {
